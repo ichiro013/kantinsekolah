@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kantin Sehat PPLG</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                🥗 Kantin Sehat <span>PPLG</span>
+            </div>
+
+            <nav>
+                <a href="#home">Beranda</a>
+                <a href="#menu">Menu</a>
+                <a href="#tentang">Tentang</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tagline">🌿 Sehat, Enak, dan Terjangkau</span>
+
+            <h1>
+                Selamat Datang di<br>
+                <span>Kantin Sehat PPLG</span>
+            </h1>
+
+            <p>
+                Nikmati berbagai pilihan makanan dan minuman
+                lezat dengan harga ramah di kantong.
+            </p>
+
+            <a href="#menu" class="hero-btn">
+                Lihat Menu →
+            </a>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <main id="menu">
+        <section class="menu-section">
+
+            <div class="section-title">
+                <span>🍽️ PILIHAN TERBAIK</span>
+                <h2>Menu Kantin Kami</h2>
+                <p>Pilih makanan dan minuman favoritmu!</p>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Cari makanan atau minuman...">
+            </div>
+
+            <!-- FILTER -->
+            <div class="filter-menu">
+                <button class="filter-btn active" onclick="filterMenu('all', this)">
+                    Semua
+                </button>
+
+                <button class="filter-btn" onclick="filterMenu('makanan', this)">
+                    🍛 Makanan
+                </button>
+
+                <button class="filter-btn" onclick="filterMenu('minuman', this)">
+                    🥤 Minuman
+                </button>
+            </div>
+
+            <!-- PRODUCT LIST -->
+            <div class="container" id="menuContainer">
+
+                <!-- MAKANAN -->
+                <div class="card" data-category="makanan">
+                    <img src="images/nasigoreng.jpg" alt="Nasi Goreng">
+                    <div class="card-body">
+                        <span class="category">Makanan</span>
+                        <h3>Nasi Goreng Spesial</h3>
+                        <p>Nasi goreng hidangan berupa nasi yang dimasak kembali dengan cara digoreng menggunakan wajan
+                            atau wok bersama minyak, margarin, serta berbagai bumbu.</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 10.000</span>
+                            <a href="https://wa.me/6283898130761?text=Saya%20ingin%20memesan%20Nasi%20Goreng%20Spesial"
+                                target="_blank" class="btn-order">
+                                Pesan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="makanan">
+                    <img src="images/miegoreng.jpg" alt="Mie Goreng">
+                    <div class="card-body">
+                        <span class="category">Makanan</span>
+                        <h3>Mie Goreng</h3>
+                        <p>Mie goreng hidangan khas Indonesia berupa mi kuning basah atau mi kering yang dimasak dengan
+                            cara ditumis menggunakan sedikit minyak, kecap manis, serta berbagai bumbu dan isian.</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 8.000</span>
+                            <a href="https://wa.me/6283898130761?text=Saya%20ingin%20memesan%20Mie%20Goreng"
+                                target="_blank" class="btn-order">
+                                Pesan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="makanan">
+                    <img src="images/ayamgeprek.jpg" alt="Ayam Geprek">
+                    <div class="card-body">
+                        <span class="category">Makanan</span>
+                        <h3>Ayam Geprek</h3>
+                        <p>Ayam geprek hidangan khas Indonesia berupa ayam goreng tepung (crispy) yang diletakkan di
+                            atas ulekan sambal lalu ditumbuk atau ditekan hingga dagingnya sedikit remuk agar bumbu
+                            sambal meresap.</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 12.000</span>
+                            <a href="https://wa.me/6283898130761?text=Saya%20ingin%20memesan%20Ayam%20Geprek"
+                                target="_blank" class="btn-order">
+                                Pesan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MINUMAN -->
+                <div class="card" data-category="minuman">
+                    <img src="images/esteh.jfif" alt="Es Teh">
+                    <div class="card-body">
+                        <span class="category">Minuman</span>
+                        <h3>Es Teh Manis</h3>
+                        <p>Minuman populer di Indonesia yang terbuat dari seduhan daun teh (biasanya teh hitam) yang
+                            diberi pemanis gula dan disajikan dingin bersama es batu.</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 4.000</span>
+                            <a href="https://wa.me/6283898130761?text=Saya%20ingin%20memesan%20Es%20Teh" target="_blank"
+                                class="btn-order">
+                                Pesan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="minuman">
+                    <img src="images/jusjeruk.jpg" alt="Jus Jeruk">
+                    <div class="card-body">
+                        <span class="category">Minuman</span>
+                        <h3>Jus Jeruk</h3>
+                        <p>Minuman sari buah yang diperoleh dari hasil pemerasan atau penghancuran buah jeruk segar.</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 7.000</span>
+                            <a href="https://wa.me/6283898130761?text=Saya%20ingin%20memesan%20Jus%20Jeruk"
+                                target="_blank" class="btn-order">
+                                Pesan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-category="minuman">
+                    <img src="images/susucoklat.jpg" alt="Susu Cokelat">
+                    <div class="card-body">
+                        <span class="category">Minuman</span>
+                        <h3>Susu Cokelat</h3>
+                        <p> minuman berbasis susu (baik susu sapi maupun susu nabati) yang dicampur dengan bubuk kakao
+                            atau perasa cokelat dan pemanis.</p>
+                        <div class="card-footer">
+                            <span class="price">Rp 6.000</span>
+                            <a href="https://wa.me/6283898130761?text=Saya%20ingin%20memesan%20Susu%20Cokelat"
+                                target="_blank" class="btn-order">
+                                Pesan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                Menu tidak ditemukan 😔
+            </p>
+
+        </section>
+    </main>
+
+    <!-- ABOUT -->
+    <section class="about" id="tentang">
+        <h2>🌱 Tentang Kantin Sehat PPLG</h2>
+        <p>
+            Kantin Sehat PPLG menyediakan makanan dan minuman
+            yang lezat, sehat, higienis, dan terjangkau
+            untuk seluruh warga sekolah.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>🥗 Kantin Sehat PPLG</h3>
+        <p>Sehat Makanannya, Semangat Belajarnya!</p>
+        <p class="copyright">
+            © 2026 Kantin Sehat PPLG. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
